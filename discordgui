@@ -352,15 +352,17 @@ function DiscordLib:Window(text)
 					true
 				)
 			else
+				if gay == true then
+					gay = false
 				MainFrame:TweenSize(
 					UDim2.new(0, 681, 0, 396),
 					Enum.EasingDirection.Out,
 					Enum.EasingStyle.Quart,
 					.3,
 					true
-				)
+					)
+				end
 			end
-			gay = not gay
 		end
 	end)
 
