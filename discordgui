@@ -349,8 +349,10 @@ function DiscordLib:Window(text)
 					.3,
 					true
 			)
+			wait(0.3)
+			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 			gay = true
-			minimized = true
+			minimized = false
 			else
 			if (Key.KeyCode == Enum.KeyCode.Q) and gay == true then
 				MainFrame:TweenSize(
@@ -361,7 +363,7 @@ function DiscordLib:Window(text)
 					true
 				)
 				gay = false
-				minimized = false
+				minimized = true
 			end
 		end
 	end)
