@@ -340,7 +340,7 @@ function DiscordLib:Window(text)
 		end
 	)
 	
-	--[[uis.InputBegan:connect(function(Key)
+	uis.InputBegan:connect(function(Key)
 		if (Key.KeyCode == Enum.KeyCode.Q) then
 			if gay == false then
 				gay = true
@@ -362,7 +362,7 @@ function DiscordLib:Window(text)
 			end
 			gay = not gay
 		end
-	end)]]
+	end)
 
 	local SettingsOpenBtn = Instance.new("TextButton")
 	local SettingsOpenBtnIco = Instance.new("ImageLabel")
