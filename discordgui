@@ -89,6 +89,7 @@ Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 function DiscordLib:Window(text)
 	local currentservertoggled = ""
 	local minimized = false
+	local gay = false
 	local fs = false
 	local settingsopened = false
 	local MainFrame = Instance.new("Frame")
@@ -111,6 +112,7 @@ function DiscordLib:Window(text)
 	local ServersHoldLayout = Instance.new("UIListLayout")
 	local ServersHoldPadding = Instance.new("UIPadding")
 	local TopFrameHolder = Instance.new("Frame")
+	local uis = game:GetService("UserInputService")
 
 	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = Discord
@@ -338,14 +340,9 @@ function DiscordLib:Window(text)
 		end
 	)
 	
-	local localPlayer       = game:GetService("Players").LocalPlayer;
-	local localCharacter    = localPlayer.Character
-	local Mouse             = localPlayer:GetMouse();
 
 
-	local gay = false
 
-	local uis = game:GetService("UserInputService");
 	uis.InputBegan:connect(function(Key)
 		if (Key.KeyCode == Enum.KeyCode.Q) then
 			if gay == false then
@@ -367,6 +364,7 @@ function DiscordLib:Window(text)
 			end
 			gay = not gay
 		end
+	end)
 
 	local SettingsOpenBtn = Instance.new("TextButton")
 	local SettingsOpenBtnIco = Instance.new("ImageLabel")
@@ -3272,7 +3270,6 @@ function DiscordLib:Window(text)
 
 		return ChannelHold
 	end
-	return ServerHold
-	end)		
+	return ServerHold		
 end
-	return DiscordLib
+return DiscordLib
