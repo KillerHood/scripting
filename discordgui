@@ -340,12 +340,10 @@ function DiscordLib:Window(text)
 		end
 	)
 	
-
-
-
-	uis.InputBegan:connect(function(Key)
+	--[[uis.InputBegan:connect(function(Key)
 		if (Key.KeyCode == Enum.KeyCode.Q) then
 			if gay == false then
+				gay = true
 				MainFrame:TweenSize(
 					UDim2.new(0, 681, 0, 22),
 					Enum.EasingDirection.Out,
@@ -364,7 +362,7 @@ function DiscordLib:Window(text)
 			end
 			gay = not gay
 		end
-	end)
+	end)]]
 
 	local SettingsOpenBtn = Instance.new("TextButton")
 	local SettingsOpenBtnIco = Instance.new("ImageLabel")
