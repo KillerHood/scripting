@@ -341,8 +341,7 @@ function DiscordLib:Window(text)
 	)
 	
 	uis.InputBegan:connect(function(Key)
-		if (Key.KeyCode == Enum.KeyCode.Q) then
-			if gay == false then
+		if (Key.KeyCode == Enum.KeyCode.Q) and gay == false then
 				gay = true
 				MainFrame:TweenSize(
 					UDim2.new(0, 681, 0, 22),
@@ -352,8 +351,7 @@ function DiscordLib:Window(text)
 					true
 				)
 			else
-				if (Key.KeyCode == Enum.KeyCode.Q) then
-				if gay == true then
+			if (Key.KeyCode == Enum.KeyCode.Q) and gay == true then
 					gay = false
 				MainFrame:TweenSize(
 					UDim2.new(0, 681, 0, 396),
@@ -361,10 +359,8 @@ function DiscordLib:Window(text)
 					Enum.EasingStyle.Quart,
 					.3,
 					true
-					)
-				end
+				)
 			end
-		end
 		end
 	end)
 
