@@ -350,6 +350,7 @@ function DiscordLib:Window(text)
 					true
 			)
 			gay = true
+			minimized = true
 			else
 			if (Key.KeyCode == Enum.KeyCode.Q) and gay == true then
 				MainFrame:TweenSize(
@@ -360,6 +361,7 @@ function DiscordLib:Window(text)
 					true
 				)
 				gay = false
+				minimized = false
 			end
 		end
 	end)
