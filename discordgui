@@ -337,6 +337,37 @@ function DiscordLib:Window(text)
 			minimized = not minimized
 		end
 	)
+	
+	local localPlayer       = game:GetService("Players").LocalPlayer;
+	local localCharacter    = localPlayer.Character
+	local Mouse             = localPlayer:GetMouse();
+
+
+	local gay = false
+
+	local uis = game:GetService("UserInputService");
+	uis.InputBegan:connect(function(Key)
+		if (Key.KeyCode == Enum.KeyCode.Q) then
+			if gay == false then
+				MainFrame:TweenSize(
+					UDim2.new(0, 681, 0, 22),
+					Enum.EasingDirection.Out,
+					Enum.EasingStyle.Quart,
+					.3,
+					true
+				)
+			else
+				MainFrame:TweenSize(
+					UDim2.new(0, 681, 0, 396),
+					Enum.EasingDirection.Out,
+					Enum.EasingStyle.Quart,
+					.3,
+					true
+				)
+			end
+			gay = not gay
+		end
+	end
 
 	local SettingsOpenBtn = Instance.new("TextButton")
 	local SettingsOpenBtnIco = Instance.new("ImageLabel")
@@ -2131,7 +2162,7 @@ function DiscordLib:Window(text)
 
 				Button.Name = "Button"
 				Button.Parent = ChannelHolder
-				Button.BackgroundColor3 = Color3.fromRGB(105, 106, 109)
+				Button.BackgroundColor3 = Color3.fromRGB(114, 137, 228)
 				Button.Size = UDim2.new(0, 401, 0, 30)
 				Button.AutoButtonColor = false
 				Button.Font = Enum.Font.Gotham
@@ -2147,7 +2178,7 @@ function DiscordLib:Window(text)
 					TweenService:Create(
 						Button,
 						TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(105, 106, 109)}
+						{BackgroundColor3 = Color3.fromRGB(103,123,196)}
 					):Play()
 				end)
 
@@ -2165,7 +2196,7 @@ function DiscordLib:Window(text)
 					TweenService:Create(
 						Button,
 						TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(105, 106, 109)}
+						{BackgroundColor3 = Color3.fromRGB(114, 137, 228)}
 					):Play()
 				end)
 				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
