@@ -367,7 +367,6 @@ function DiscordLib:Window(text)
 			end
 			gay = not gay
 		end
-	end
 
 	local SettingsOpenBtn = Instance.new("TextButton")
 	local SettingsOpenBtnIco = Instance.new("ImageLabel")
@@ -3274,5 +3273,6 @@ function DiscordLib:Window(text)
 		return ChannelHold
 	end
 	return ServerHold
+	end)		
 end
-return DiscordLib
+	return DiscordLib
